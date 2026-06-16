@@ -29,6 +29,10 @@ def check_bound(rct: pg.Rect) -> tuple[bool, bool]:
     return yoko, tate
 
 def gameover(screen: pg.Surface):
+    """引数 :  こうかとん画像8のRect 
+       戻り値 : ゲームオーバー画面の出力情報
+       概要 : GameOver時の出力を担当する関数
+    """
     gov_screen = pg.Surface((WIDTH,HEIGHT))
     pg.draw.rect(gov_screen,(0,0,0),pg.Rect(0,0,WIDTH,HEIGHT))
     gov_screen.set_alpha(150)
